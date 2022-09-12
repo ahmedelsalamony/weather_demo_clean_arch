@@ -6,7 +6,7 @@ class WeatherByCountryName {
 
   WeatherByCountryName(this.weatherRepo);
 
-  WeatherEntity execute(String countryName){
-   return weatherRepo.getWeatherByCountryName(countryName);
+  Future<WeatherEntity> execute(String countryName) async {
+   return await weatherRepo.getWeatherByCountryName(countryName);
   }
 }
